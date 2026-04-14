@@ -2,9 +2,9 @@
 const enNavbarData = {
   title: " Your name ",
   Home: "Home",
-  publications: "publications",
   Research: "Research",
-  Jobs: "Jobs",
+  Teaching: "Teaching",
+  Work: "Work Experience",
   Contact: "Contact",
 };
 
@@ -30,8 +30,8 @@ const enHomePageData = {
   `,
 };
 
-// ---------- Publications page data
-const enPublicationsPageData = {
+// ---------- Research page data
+const enResearchPageData = {
   type_one_title: "Journal Papers",
 
   type_one_items: [
@@ -115,8 +115,8 @@ const enPublicationsPageData = {
   ],
 };
 
-// ---------- Research page data
-const enResearchPageData = {
+// ---------- Teaching page data
+const enTeachingPageData = {
   title: "Research",
   content: `
     <div class='research_content'>
@@ -130,8 +130,8 @@ const enResearchPageData = {
   `,
 };
 
-// ---------- Jobs page data
-const enJobsPageData = {
+// ---------- Work page data
+const enWorkPageData = {
   title: "Jobs",
   items: [
     {

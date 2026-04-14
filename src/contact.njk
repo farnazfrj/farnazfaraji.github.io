@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Contact
+permalink: /contact/
+---
+
+<h6 class="title">Contact</h6>
+
+<ul id="contact_data">
+  <li>
+    <img src="/assets/images/icons/mail.png" alt="Email" />
+    <p>{{ site.email | replace("@", "[at]") }}</p>
+  </li>
+  {%- for link in site.social %}
+  <li>
+    <img src="{{ link.icon }}" alt="{{ link.name }}" />
+    <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+  </li>
+  {%- endfor %}
+</ul>

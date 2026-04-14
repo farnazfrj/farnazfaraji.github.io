@@ -1,0 +1,67 @@
+{
+  "sections": [
+    {
+      "title": "Journal Papers",
+      "items": [
+        {
+          "title": "Remapping Belonging: Integrating Immigrant Perceptions into Historic Landscape Characterisation through PPGIS.",
+          "venue": "Landscape Research.",
+          "date": "Accepted",
+          "link": "",
+          "github": "",
+          "writers": ["Faraji, F.", "van Manen, N.", "Carrer, F.", "Burgers, G."]
+        },
+        {
+          "title": "Development of the Planning Framework of the Conservation for World Heritage Site of Maymand Cultural Landscape.",
+          "venue": "Culture of Islamic Architecture and Urbanism Journal. Volume 8, Issue 2. DOI: 10.52547/ciauj.8.2.501",
+          "date": "2023",
+          "link": "https://doi.org/10.52547/ciauj.8.2.501",
+          "github": "",
+          "writers": ["Moradi, S.", "Faraji, F.", "Fadaei Nezhad, S."]
+        },
+        {
+          "title": "Automatic Localization of Caravanserais in Satellite Images using Image Processing Techniques based on Deep Learning.",
+          "venue": "Journal of Circuits, Data and System Analysis.",
+          "date": "2023",
+          "link": "https://sanad.iau.ir/fa/Article/848525",
+          "github": "",
+          "writers": ["Salari, M. H.", "Shayegan, M. A.", "Faraji, F."]
+        }
+      ]
+    },
+    {
+      "title": "Book Chapters",
+      "items": [
+        {
+          "title": "Seeking Inclusivity with PPGIS: Lessons Learned from Three Heritage-themed Case Studies Across Europe.",
+          "venue": "In: A Research Agenda for Participatory Mapping and PPGIS. Edward Elgar.",
+          "date": "2026",
+          "link": "",
+          "github": "",
+          "writers": ["Ducci, M.", "Faraji, F.", "Swiderski, M."]
+        }
+      ]
+    },
+    {
+      "title": "Conference Papers and Presentations",
+      "items": [
+        {
+          "title": "Landscape Characterisation in Non-European Contexts: Firuzabad Archaeological Landscape in Iran.",
+          "venue": "Landscape Archaeology Conference in Otto-Friedrich-University Bamberg, Germany.",
+          "date": "2026",
+          "link": "",
+          "github": "",
+          "writers": ["Faraji, F.", "Fadaei Nezhad, S."]
+        },
+        {
+          "title": "Belongingness in the in-between fields: Migrants' Perception of English Urban Landscapes; Case Study of Newcastle Upon Tyne.",
+          "venue": "History & Heritage, AMPS Prague Conference. Online Presentation.",
+          "date": "2023",
+          "link": "https://www.youtube.com/watch?v=I2u1l0pO1A",
+          "github": "",
+          "writers": ["Faraji, F."]
+        }
+      ]
+    }
+  ]
+}

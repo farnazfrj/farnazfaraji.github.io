@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Research
+permalink: /research/
+---
+
+{%- for section in publications.sections %} {%- if section.title %}
+<h6 class="title">{{ section.title }}</h6>
+<div class="publication_container">
+  {%- for item in section.items %}
+  <div class="publications_item">
+    <div class="publications_header">
+      {%- if item.writers.length > 0 %} {%- for writer in item.writers %}
+      <span>{{ writer }}</span>{{ ", " if not loop.last }} {%- endfor %} {%- endif %} {%- if
+      item.date %}<span>({{ item.date }}).</span>{% endif %}
+      <h2>{{ item.title }}</h2>
+    </div>
+    <p>{{ item.venue }}</p>
+    <ul class="publications_footer">
+      {%- if item.link %}
+      <li><a href="{{ item.link }}" target="_blank">View</a></li>
+      {%- endif %} {%- if item.github %}
+      <li><a href="{{ item.github }}" target="_blank">Github</a></li>
+      {%- endif %}
+    </ul>
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %} {%- endfor %}

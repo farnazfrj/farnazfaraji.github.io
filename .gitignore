@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Playwright/testing artifacts
+.playwright-mcp/
+
+# Node (if ever used)
+node_modules/

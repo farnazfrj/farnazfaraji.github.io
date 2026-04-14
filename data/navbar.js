@@ -1,37 +1,35 @@
 $(document).ready(function () {
-  let lang = localStorage.getItem("lang");
-
-  if (!lang) {
-    localStorage.setItem("lang", "en");
-  }
-
   const navbar_data = {
-    title: lang === "fa" ? faNavbarData.title : enNavbarData.title,
+    title: enNavbarData.title,
     navbar_links: [
       {
         active: navbarLinks.home ? true : false,
-        title: lang === "fa" ? faNavbarData.Home : enNavbarData.Home,
+        title: enNavbarData.Home,
         url: "/",
       },
       {
         active: navbarLinks.Research ? true : false,
-        title:
-          lang === "fa" ? faNavbarData.Research : enNavbarData.Research,
+        title: enNavbarData.Research,
         url: "/Research.html",
       },
       {
         active: navbarLinks.Teaching ? true : false,
-        title: lang === "fa" ? faNavbarData.Teaching : enNavbarData.Teaching,
+        title: enNavbarData.Teaching,
         url: "/Teaching.html",
       },
       {
         active: navbarLinks.Work ? true : false,
-        title: lang === "fa" ? faNavbarData.Work : enNavbarData.Work,
+        title: enNavbarData.Work,
         url: "/Work.html",
       },
       {
-        active: navbarLinks.Contact ? true : false,
-        title: lang === "fa" ? faNavbarData.Contact : enNavbarData.Contact,
+        active: navbarLinks.AsIAm ? true : false,
+        title: enNavbarData.AsIAm,
+        url: "/as-i-am.html",
+      },
+      {
+        active: navbarLinks.contact ? true : false,
+        title: enNavbarData.Contact,
         url: "/contact.html",
       },
     ],
@@ -51,7 +49,7 @@ $(document).ready(function () {
                   ? "class='nav-link active'"
                   : "class='nav-link'"
               }
-              href=${link.url}
+              href="${link.url}"
               >${link.title}</a>
             </li>`
       )

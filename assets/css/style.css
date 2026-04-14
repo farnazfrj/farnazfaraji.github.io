@@ -1,58 +1,37 @@
-@font-face {
-  font-family: "vazir";
-  src: url("../fonts/vazir-400.eot");
-  src: url("../fonts/vazir-400.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/vazir-400.woff2") format("woff2"),
-    url("../fonts/vazir-400.woff") format("woff"),
-    url("../fonts/vazir-400.ttf") format("truetype");
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+body {
+  font-family: "DM Sans", sans-serif;
 }
 
-@font-face {
-  font-family: "vazir";
-  src: url("../fonts/vazir-700.eot");
-  src: url("../fonts/vazir-700.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/vazir-700.woff2") format("woff2"),
-    url("../fonts/vazir-700.woff") format("woff"),
-    url("../fonts/vazir-700.ttf") format("truetype");
-  font-weight: 700;
+a {
+  color: #00624A;
+}
+
+a:hover {
+  color: #004d3a;
 }
 
 /* Navbar styles */
-#language {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  font-family: "vazir";
-  font-size: 13px;
-}
-
-#languageIcon {
-  width: 15px;
-  margin: 0 5px;
-}
-
-.rtl_wrapper #language {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  font-family: "vazir";
-  font-size: 13px;
-}
 
 .bg-light {
   background-color: #fff !important;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
 }
 
-.collapse {
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .title {
@@ -76,6 +55,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .main_header_info img {
@@ -241,7 +221,7 @@
 }
 
 .publication_container .publications_footer a {
-  color: blue;
+  color: #00624A;
   text-decoration: none;
 }
 
@@ -392,27 +372,15 @@
 
 #contact_data a {
   text-decoration: none;
-  color: rgb(5, 5, 216);
+  color: #00624A;
 }
 
 @media (max-width: 980px) {
-  .collapse {
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-
-  #language {
-    margin: 0.5rem 0;
-    margin-right: 1.1rem;
-    flex-direction: row !important;
-    width: 90px;
-    justify-content: flex-start !important;
-  }
-
-  .rtl_wrapper #language {
-    margin: 0.5rem 0;
-    margin-right: 0.8rem;
   }
 
   .navbar-toggler {
@@ -499,132 +467,3 @@
   }
 }
 
-/* --------- Rtl styles --------- */
-
-/* Home page styles */
-.rtl_wrapper > * {
-  direction: rtl;
-  font-family: "vazir";
-  font-size: 0.9rem;
-  line-height: 1.8;
-}
-
-.rtl_wrapper .main_header {
-  display: flex;
-  align-items: center;
-  min-height: 90vh;
-}
-
-.rtl_wrapper h1 {
-  font-size: 1.4rem;
-}
-
-.rtl_wrapper h2 {
-  font-size: 1.1rem;
-}
-
-.rtl_wrapper h6 {
-  padding-bottom: 3px;
-}
-
-.main_header_content p {
-  margin-top: 0.7rem !important;
-  text-align: justify;
-}
-
-.rtl_wrapper ul {
-  padding: 0;
-  padding-right: 1rem;
-}
-
-/* Publications page styles */
-.rtl_wrapper .publication_container .publications_header h2 {
-  display: inline;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: justify;
-  direction: rtl;
-}
-
-.rtl_wrapper .publication_container .publications_header span {
-  font-size: 0.89rem;
-}
-
-.rtl_wrapper .publication_container .publications_item {
-  margin-bottom: 3rem;
-  margin-right: 2rem;
-  position: relative;
-}
-
-.rtl_wrapper .publication_container .publications_item::before {
-  right: -2rem;
-}
-
-.rtl_wrapper .publication_container .publications_footer span {
-  margin-left: 1rem;
-}
-
-.rtl_wrapper .publication_container .publications_footer li {
-  margin-right: 0;
-  margin-left: 2rem;
-  direction: rtl;
-  text-align: right;
-}
-
-.rtl_wrapper .publication_container .publications_footer li::before {
-  left: -1rem;
-  right: auto;
-}
-
-.rtl_wrapper .publication_container .publications_footer span:last-of-type {
-  margin-right: 0.5rem;
-}
-
-/* Jobs page styles */
-
-.rtl_wrapper #jobs_data .job_item {
-  padding-right: 2rem;
-}
-
-.rtl_wrapper #jobs_data .job_item::after {
-  right: 0px;
-}
-
-.rtl_wrapper #jobs_data .job_item::before {
-  right: 3px;
-}
-
-.rtl_wrapper #jobs_data h1 {
-  font-size: 1.1rem;
-}
-
-.rtl_wrapper #jobs_data h2 {
-  font-size: 0.95rem;
-  margin-right: 0.4rem;
-}
-
-.rtl_wrapper #jobs_data .job_header .job_location {
-  margin-right: 1rem;
-  margin-left: 0;
-  position: relative;
-}
-
-.rtl_wrapper #jobs_data .job_header .job_location::before {
-  right: -0.5rem;
-}
-
-.rtl_wrapper #jobs_data ul {
-  padding: 0;
-  padding-right: 1rem;
-}
-
-/* Contact page styles */
-.rtl_wrapper #contact_data img {
-  width: 30px;
-  margin-left: 1.5rem;
-  margin-right: 0;
-}
-
-.rtl_wrapper #contact_data a {
-  direction: ltr;
-}

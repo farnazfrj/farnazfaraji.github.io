@@ -6,40 +6,78 @@ Originally based on [Academic CV](https://github.com/simamojtahedi/Academic-cv) 
 
 ## Getting started (macOS)
 
-### Prerequisites
+You can use the built-in **Terminal** app on Mac. No need for VS Code or any other editor (though you can use any text editor you like to edit files).
 
-Install [Node.js](https://nodejs.org/) if you don't have it. Open **Terminal** and run:
+### Step 1: Install Homebrew (if you don't have it)
+
+Open **Terminal** (press `Cmd + Space`, type "Terminal", hit Enter) and paste:
 
 ```bash
-brew install node
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-If you don't have Homebrew, install it first: https://brew.sh
+Follow the instructions on screen. When it's done, **close and reopen Terminal**.
 
-### Setup
-
-Clone the repo and install dependencies:
+To verify it works:
 
 ```bash
+brew --version
+```
+
+If it prints a version number, you're good.
+
+### Step 2: Install Node.js and Git
+
+```bash
+brew install node git
+```
+
+To verify:
+
+```bash
+node --version
+git --version
+```
+
+Both should print a version number.
+
+### Step 3: Clone the repo
+
+```bash
+cd ~/Desktop
 git clone https://github.com/farnazfrj/farnazfaraji.github.io.git
 cd farnazfaraji.github.io
+```
+
+This creates a folder on your Desktop with the website code.
+
+### Step 4: Install dependencies
+
+```bash
 npm install
 ```
 
-### Run locally
+You only need to do this once (or when dependencies change).
+
+### Step 5: Run the website locally
 
 ```bash
 npm run dev
 ```
 
-Open http://localhost:8080 in your browser. Changes you make to files will reload automatically.
+Open http://localhost:8080 in your browser (Safari, Chrome, Firefox — any works). You'll see your website running locally. When you edit and save a file, the browser refreshes automatically.
 
-### Other commands
+To stop the server, press `Ctrl + C` in Terminal.
 
-```bash
-npm run build      # build for production (output: _site/)
-npm run format     # auto-format code with Prettier
-```
+## Editing workflow
+
+The recommended workflow is:
+
+1. Run `npm run dev` to start the local server
+2. Open http://localhost:8080 in your browser
+3. Edit files in any text editor (VS Code, Sublime Text, or even TextEdit)
+4. Save the file — the browser auto-refreshes so you can see your changes
+5. When happy with the changes, push to GitHub (see below)
 
 ## Project structure
 
@@ -159,13 +197,9 @@ Replace the files:
 - `src/files/profile.jpg` — profile photo
 - `src/files/resume.pdf` — downloadable CV
 
-## Deployment
+## Pushing changes to the live website
 
-Deploys automatically to GitHub Pages via GitHub Actions on every push to `main`.
-
-### How to push changes
-
-After editing files locally:
+After editing files locally and verifying they look good at http://localhost:8080:
 
 ```bash
 git add -A
@@ -173,8 +207,24 @@ git commit -m "update: description of what you changed"
 git push
 ```
 
-The site will rebuild and deploy automatically within a couple of minutes.
+The site will rebuild and deploy automatically within a couple of minutes at https://www.nazfaraji.com.
 
-### First-time GitHub Pages setup
+## Troubleshooting
 
-Go to your repo on GitHub: **Settings > Pages > Source** and select **GitHub Actions**.
+### `npm: command not found`
+
+Node.js is not installed. Run `brew install node` and reopen Terminal.
+
+### `npm run dev` shows errors
+
+Make sure you ran `npm install` first. If it still fails, try:
+
+```bash
+rm -rf node_modules
+npm install
+npm run dev
+```
+
+### Changes don't show on the live site
+
+After `git push`, go to https://github.com/farnazfrj/farnazfaraji.github.io/actions and check if the "Build and Deploy" workflow completed successfully.

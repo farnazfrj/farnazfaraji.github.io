@@ -1,48 +1,54 @@
+# farnazfaraji.github.io
 
-# Academic CV
+Personal academic website of Farnaz Faraji, built with [Eleventy](https://www.11ty.dev/).
 
-Github Pages multi language template for academic personal websites which supports both RTL and LTR directions.
+Originally based on [Academic CV](https://github.com/simamojtahedi/Academic-cv) by [@simamojtahedi](https://github.com/simamojtahedi), rewritten with 11ty for maintainability.
 
-This template support the kinds of content that academics have: **publications**, **research**, **jobs**, **contact**, and a **dynamically-generated CV**.\
-Fork [this repository](https://github.com/simamojtahedi/Academic-cv), modify the configuration and files, and have your own site for free by publishing this code on [GitHub pages](https://pages.github.com/) or any other domain.
+## Development
 
+```bash
+npm install        # install dependencies
+npm run dev        # start dev server (http://localhost:8080)
+npm run build      # build for production (output: _site/)
+npm run format     # format code with Prettier
+```
 
+## Project structure
 
+```
+src/
+  _data/             # Content data (edit these to update the site)
+    site.json        # Name, email, social links
+    navigation.json  # Navbar menu items
+    publications.json # Research publications
+    work.json        # Work experience
+  _includes/
+    base.njk         # Base HTML layout (shared by all pages)
+  assets/
+    css/style.css    # All styles
+    images/icons/    # Icon assets
+    scripts/         # AOS animation library, Bootstrap collapse
+  files/
+    profile.jpg      # Profile photo
+    resume.pdf       # CV download
+  index.njk          # Home page
+  research.njk       # Research / publications
+  teaching.njk       # Teaching
+  work.njk           # Work experience
+  as-i-am.njk        # Personal / hobbies
+  contact.njk        # Contact info
+```
 
+## How to update content
 
-## Demo
+- **Personal info and social links**: edit `src/_data/site.json`
+- **Menu items**: edit `src/_data/navigation.json`
+- **Publications**: edit `src/_data/publications.json`
+- **Work experience**: edit `src/_data/work.json`
+- **Page content** (teaching, as-i-am, home): edit the `.njk` files directly
+- **Profile photo**: replace `src/files/profile.jpg`
+- **CV**: replace `src/files/resume.pdf`
 
-Here you can check Demo online: 
-[Demo](https://simamojtahedi-academic-cv.netlify.app/)
+## Deployment
 
-![academic_cv](https://github.com/simamojtahedi/simamojtahedi/assets/64223524/3b0a48fc-a5aa-4ff2-b6cb-3fc88e3d3b00)
-## Getting started
-
-1.Register a GitHub account.
-2.Fork this repository by clicking the `fork` button in the top right.
-3.Go to the repository’s settings and rename the repository `[your GitHub username].github.io`, which will also be your website’s URL.
-4.Set site-wide configuration as see below description.
-
-## Pages setup and main configuration
-
-The main configuration file for the site is in `global.js` file in data directory, which defines the content in the sidebar and other site-wide features in `globalData` object.
-You will need to replace the default variables with ones about yourself and your site’s github repository.
-Also in `navbarLinks` object the pages of the site are defined, to disable any of the pages that you don't want in your page, change the value of that page to false.
-
-## Files
-
-You can upload your image and your PDF resume as below template in `files` directory.
-Your image: profile.jpg/png/...
-Your resume: resume.pdf
-
-## Pages configuration
-
-In `lang` directory there are two files named `en.js` and `fa.js`.
-You can change data in these files based on your information for home, publications, research, jobs pages and navbar titles as provided template.
-
-\*\* Remeber to change both both `fa.js` and `en.js` files.
-
-## Authors
-
-- [@simamojtahedi](https://github.com/simamojtahedi)
-
+Deploys automatically to GitHub Pages via GitHub Actions on push to `main`.

@@ -1,0 +1,18 @@
+{
+  "name": "farnazfaraji.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal academic website of Farnaz Faraji",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "format": "prettier --write 'src/**/*.{njk,json,css,js}' '.eleventy.js'",
+    "format:check": "prettier --check 'src/**/*.{njk,json,css,js}' '.eleventy.js'"
+  },
+  "author": "Farnaz Faraji",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
+    "prettier": "^3.8.2"
+  }
+}

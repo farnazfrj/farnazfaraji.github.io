@@ -4,15 +4,23 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+@media (min-width: 1400px) {
+  .container-lg {
+    max-width: 1320px;
+  }
+}
+
 a {
-  color: #00624A;
+  color: #00624a;
 }
 
 a:hover {
   color: #004d3a;
 }
 
-/* Navbar styles */
+/* ---------------------------------------------------------------------------
+ * Navbar
+ * ---------------------------------------------------------------------------*/
 
 .bg-light {
   background-color: #fff !important;
@@ -34,6 +42,10 @@ a:hover {
   }
 }
 
+/* ---------------------------------------------------------------------------
+ * Shared
+ * ---------------------------------------------------------------------------*/
+
 .title {
   font-size: 1.3rem !important;
   font-weight: bold;
@@ -42,9 +54,10 @@ a:hover {
   margin-top: 2rem;
 }
 
-/* --------- LTR styles --------- */
+/* ---------------------------------------------------------------------------
+ * Home page
+ * ---------------------------------------------------------------------------*/
 
-/* Home page styles */
 .main_header {
   display: flex;
   align-items: center;
@@ -63,7 +76,6 @@ a:hover {
   height: 280px;
   object-fit: cover;
   border-radius: 100%;
-  /* box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); */
   border: 5px solid #fff;
 }
 
@@ -90,21 +102,13 @@ a:hover {
 .main_header_content p {
   text-align: justify;
   margin: 0 !important;
-}
-
-#home_list {
-  padding: 0;
-  padding-left: 1rem;
+  margin-top: 0.7rem !important;
 }
 
 .main_header ul {
   padding: 0;
   padding-left: 1rem;
   margin-top: 1rem;
-}
-
-#home_list li {
-  margin-bottom: 0.4rem;
 }
 
 #home_links {
@@ -117,7 +121,6 @@ a:hover {
 #home_links a {
   margin: 0 0.5rem;
   width: 33px;
-  display: block;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,10 +142,9 @@ a:hover {
   border: none;
 }
 
-/* Publications page styles */
-#publications_content {
-  margin-top: 1rem;
-}
+/* ---------------------------------------------------------------------------
+ * Publications / Research page
+ * ---------------------------------------------------------------------------*/
 
 .publication_container {
   margin-top: 3rem;
@@ -221,7 +223,7 @@ a:hover {
 }
 
 .publication_container .publications_footer a {
-  color: #00624A;
+  color: #00624a;
   text-decoration: none;
 }
 
@@ -230,11 +232,10 @@ a:hover {
   font-weight: 500;
 }
 
-.publication_container .publications_span {
-  min-width: 60px;
-}
+/* ---------------------------------------------------------------------------
+ * Teaching page
+ * ---------------------------------------------------------------------------*/
 
-/* Research page styles */
 #research_data p {
   margin: 1rem 0;
   text-align: justify;
@@ -254,7 +255,10 @@ a:hover {
   margin: 2rem auto;
 }
 
-/* Jobs page styles */
+/* ---------------------------------------------------------------------------
+ * Work Experience page
+ * ---------------------------------------------------------------------------*/
+
 #jobs_data {
   display: flex;
   flex-direction: column;
@@ -344,7 +348,10 @@ a:hover {
   padding-left: 1rem;
 }
 
-/* Contact page styles */
+/* ---------------------------------------------------------------------------
+ * Contact page
+ * ---------------------------------------------------------------------------*/
+
 #contact_data {
   list-style: none;
   margin-top: 3rem;
@@ -372,8 +379,12 @@ a:hover {
 
 #contact_data a {
   text-decoration: none;
-  color: #00624A;
+  color: #00624a;
 }
+
+/* ---------------------------------------------------------------------------
+ * Mobile responsive
+ * ---------------------------------------------------------------------------*/
 
 @media (max-width: 980px) {
   .navbar-collapse.show,
@@ -387,7 +398,6 @@ a:hover {
     border: none;
   }
 
-  /* Home page styles */
   .main_header_info img {
     width: 200px;
     height: 200px;
@@ -423,7 +433,6 @@ a:hover {
     height: 32px;
   }
 
-  /* Publications page styles */
   .publication_container .publications_item {
     margin-left: 1rem;
   }
@@ -432,7 +441,6 @@ a:hover {
     left: -1rem;
   }
 
-  /* Jobs page styles */
   #jobs_data .job_item {
     padding-left: 2rem;
     margin-bottom: 2rem;
@@ -461,9 +469,7 @@ a:hover {
     margin-left: 0.4rem;
   }
 
-  /* Contact page styles */
   #contact_data img {
     width: 30px;
   }
 }
-

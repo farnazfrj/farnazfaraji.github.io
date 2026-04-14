@@ -16,18 +16,18 @@ $(document).ready(function () {
       {
         active: navbarLinks.publications ? true : false,
         title:
-          lang === "fa" ? faNavbarData.publications : enNavbarData.publications,
-        url: "/publications.html",
+          lang === "fa" ? faNavbarData.Research : enNavbarData.Research,
+        url: "/Research.html",
       },
       {
-        active: navbarLinks.research ? true : false,
-        title: lang === "fa" ? faNavbarData.Research : enNavbarData.Research,
-        url: "/research.html",
+        active: navbarLinks.Teaching ? true : false,
+        title: lang === "fa" ? faNavbarData.Teaching : enNavbarData.Teaching,
+        url: "/Teaching.html",
       },
       {
-        active: navbarLinks.jobs ? true : false,
-        title: lang === "fa" ? faNavbarData.Jobs : enNavbarData.Jobs,
-        url: "/jobs.html",
+        active: navbarLinks.Work ? true : false,
+        title: lang === "fa" ? faNavbarData.Work : enNavbarData.Work,
+        url: "/Work.html",
       },
       {
         active: navbarLinks.contact ? true : false,

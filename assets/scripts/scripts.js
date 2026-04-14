@@ -99,38 +99,38 @@ $(document).ready(function () {
     homeData();
   }
 
-  // Publications page data
-  const setPublicationData = (id, data) => {
+  // Research page data
+  const setResearchData = (id, data) => {
     document.getElementById(id).innerHTML = data
       .map(
-        (publication) =>
+        (Research) =>
           `
-        <div class='publications_item'>
-        <div class='publications_header'>
+        <div class='Research_item'>
+        <div class='Research_header'>
           ${
-            publication.writers.length > 0
-              ? publication.writers
+            Research.writers.length > 0
+              ? Research.writers
                   .map((writer) => `<span>${writer}</span>`)
                   .join(", ")
               : ""
           }
-          ${publication.date ? `<span>(${publication.date}).</span>` : ""}
-          <h2>${publication.title}</h2>
+          ${Research.date ? `<span>(${Research.date}).</span>` : ""}
+          <h2>${Research.title}</h2>
         </div>
-        <p>${publication.abstract}</p>
-        <ul class='publications_footer'>
+        <p>${Research.abstract}</p>
+        <ul class='Research_footer'>
           ${
-            publication.link &&
+            Research.link &&
             `<li>
-                <a href=${publication.link} target="_blank"> ${
+                <a href=${Research.link} target="_blank"> ${
               lang === "en" ? "View" : " مشاهده"
             } </a>
               </li>`
           }
             ${
-              publication.github &&
+              Research.github &&
               `<li>
-                  <a href=${publication.github} target="_blank">  ${
+                  <a href=${Research.github} target="_blank">  ${
                 lang === "en" ? "Github" : "گیت‌هاب"
               }</a>
                 </li>`
@@ -143,110 +143,110 @@ $(document).ready(function () {
       .join("");
   };
 
-  function publicationsData() {
+  function ResearchData() {
     document.getElementById("page_title").innerText =
       lang === "en" ? "Publications" : "مقالات";
 
-    document.getElementById("publications_type_one_title").innerHTML =
+    document.getElementById("Research_type_one_title").innerHTML =
       lang === "en"
-        ? enPublicationsPageData.type_one_title
-        : faPublicationsPageData.type_one_title;
+        ? enResearchPageData.type_one_title
+        : faResearchPageData.type_one_title;
 
     setPublicationData(
       "publications_type_one_data",
       lang === "en"
-        ? enPublicationsPageData.type_one_items
-        : faPublicationsPageData.type_one_items
+        ? enResearchPageData.type_one_items
+        : faResearchPageData.type_one_items
     );
 
-    document.getElementById("publications_type_two_title").innerHTML =
+    document.getElementById("Research_type_two_title").innerHTML =
       lang === "en"
-        ? enPublicationsPageData.type_two_title
-        : faPublicationsPageData.type_two_title;
+        ? enResearchPageData.type_two_title
+        : faResearchPageData.type_two_title;
 
-    setPublicationData(
-      "publications_type_two_data",
+    setResearchData(
+      "Research_type_two_data",
       lang === "en"
-        ? enPublicationsPageData.type_two_items
-        : faPublicationsPageData.type_two_items
+        ? enResearchPageData.type_two_items
+        : faResearchPageData.type_two_items
     );
 
-    document.getElementById("publications_type_three_title").innerHTML =
+    document.getElementById("Research_type_three_title").innerHTML =
       lang === "en"
-        ? enPublicationsPageData.type_three_title
-        : faPublicationsPageData.type_three_title;
+        ? enResearchPageData.type_three_title
+        : faResearchPageData.type_three_title;
 
-    setPublicationData(
-      "publications_type_three_data",
+    setResearchData(
+      "Research_type_three_data",
       lang === "en"
-        ? enPublicationsPageData.type_three_items
-        : faPublicationsPageData.type_three_items
+        ? enResearchPageData.type_three_items
+        : faResearchPageData.type_three_items
     );
 
-    document.getElementById("publications_type_four_title").innerHTML =
+    document.getElementById("Research_type_four_title").innerHTML =
       lang === "en"
-        ? enPublicationsPageData.type_four_title
-        : faPublicationsPageData.type_four_title;
+        ? enResearchPageData.type_four_title
+        : faResearchPageData.type_four_title;
 
-    setPublicationData(
-      "publications_type_four_data",
+    setResearchData(
+      "Research_type_four_data",
       lang === "en"
-        ? enPublicationsPageData.type_four_items
-        : faPublicationsPageData.type_four_items
+        ? enResearchPageData.type_four_items
+        : faResearchPageData.type_four_items
     );
   }
 
-  if (pathname === "/publications") {
-    publicationsData();
+  if (pathname === "/Research") {
+    ResearchData();
   }
 
-  // Research page data
-  function researchData() {
+  // Teaching page data
+  function TeachingData() {
     document.getElementById("page_title").innerText =
-      lang === "en" ? "Research" : "تحقیقات";
+      lang === "en" ? "Teaching" : "تحقیقات";
 
-    document.getElementById("research_title").innerHTML =
-      lang === "en" ? enResearchPageData.title : faResearchPageData.title;
-    document.getElementById("research_data").innerHTML =
-      lang === "en" ? enResearchPageData.content : faResearchPageData.content;
+    document.getElementById("Teaching_title").innerHTML =
+      lang === "en" ? enTeachingPageData.title : faTeachingPageData.title;
+    document.getElementById("Teaching_data").innerHTML =
+      lang === "en" ? enTeachingPageData.content : faTeachingPageData.content;
   }
 
-  if (pathname === "/research") {
+  if (pathname === "/Teaching") {
     researchData();
   }
 
-  // Jobs page data
-  function jobsData() {
+  // Work page data
+  function WorkData() {
     document.getElementById("page_title").innerText =
-      lang === "en" ? "Jobs" : " سوابق شغلی ";
+      lang === "en" ? "Work" : " سوابق شغلی ";
 
-    document.getElementById("jobs_title").innerHTML =
-      lang === "en" ? enJobsPageData.title : faJobsPageData.title;
+    document.getElementById("Work_title").innerHTML =
+      lang === "en" ? enWorkPageData.title : faWorkPageData.title;
 
-    document.getElementById("jobs_data").innerHTML = (
-      lang === "en" ? enJobsPageData.items : faJobsPageData.items
+    document.getElementById("Work_data").innerHTML = (
+      lang === "en" ? enWorkPageData.items : faWorkPageData.items
     )
       .map(
         (job) =>
-          `<div class='job_item'>
-            <div class='job_header'>
+          `<div class='Work_item'>
+            <div class='Work_header'>
               <div>
-                <h1>${job.title}${lang === "en" ? "," : "،"}</h1>
-                <h2> ${job.company}</h2>
+                <h1>${Work.title}${lang === "en" ? "," : "،"}</h1>
+                <h2> ${Work.company}</h2>
               </div>
               <div>
-                <span>${job.startData} - ${
-            job.endDate ? job.endDate : lang === "en" ? "Now" : " تاکنون "
+                <span>${Work.startData} - ${
+            Work.endDate ? Work.endDate : lang === "en" ? "Now" : " تاکنون "
           }</span>
-                <span class='job_location'>${job.location}</span>
+                <span class='Work_location'>${Work.location}</span>
               </div>
             </div>
-            <p>${job.abstract}</p>
+            <p>${Work.abstract}</p>
             ${
-              job.achievements.length > 0
-                ? `<div class="job_achievements">
+              Work.achievements.length > 0
+                ? `<div class="Work_achievements">
                   <ul>
-                    ${job.achievements
+                    ${Work.achievements
                       .map((achievement) => `<li>${achievement}</li>`)
                       .join("")}
                   </ul>
@@ -258,8 +258,8 @@ $(document).ready(function () {
       .join("");
   }
 
-  if (pathname === "/jobs") {
-    jobsData();
+  if (pathname === "/Work") {
+    WorkData();
   }
 
   // Contact page data

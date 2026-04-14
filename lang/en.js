@@ -10,8 +10,8 @@ const enNavbarData = {
 
 // ---------- Home page data
 const enHomePageData = {
-  name: " Your name ",
-  jobTitle: " Job title ",
+  name: " Farnaz Faraji ",
+  jobTitle: " Interdisciplinary Researcher in Heritage, Landscape and Sustainability",
   home_title: "About me",
   home_content: `
   <div>

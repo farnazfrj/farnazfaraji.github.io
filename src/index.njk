@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Home
+isHome: true
+---
+
+<div class="row main_header">
+  <div class="col-xl-3 col-lg-4 main_header_info">
+    <img alt="{{ site.name }}" src="{{ site.image }}" />
+    <h1>{{ site.name }}</h1>
+    <h2>{{ site.jobTitle }}</h2>
+    <div id="home_links">
+      <li>
+        <a href="mailto:{{ site.email }}" target="_blank"
+          ><img src="/assets/images/icons/mail.png" alt="Email"
+        /></a>
+      </li>
+      {%- for link in site.social %}
+      <li>
+        <a href="{{ link.url }}" target="_blank"
+          ><img src="{{ link.icon }}" alt="{{ link.name }}"
+        /></a>
+      </li>
+      {%- endfor %}
+      <li>
+        <a href="{{ site.resume }}" target="_blank"
+          ><img src="/assets/images/icons/resume.png" alt="Resume"
+        /></a>
+      </li>
+    </div>
+  </div>
+  <div class="col-xl-9 col-lg-8 main_header_content">
+    <h2 class="title">About me</h2>
+    <p>
+      Interdisciplinary researcher specialising in landscape and heritage studies, with a focus on
+      how cultural and environmental knowledge of landscapes is produced, interpreted, and
+      translated into heritage policy and planning. My work combines spatial analysis (GIS, PPGIS)
+      with qualitative and archival approaches to examine landscape change, heritage narratives, and
+      governance, particularly in the Middle East and European contexts.
+    </p>
+    <p>
+      I have experience working across research and practice, including policy-oriented projects,
+      and contribute to debates in landscape archaeology, critical heritage studies, and the role of
+      research in shaping sustainability and heritage policy.
+    </p>
+
+    <h2 class="title">Education</h2>
+    <ul>
+      <li>
+        <strong>PhD in History and Heritage of Cultural Landscapes and Urban Environments</strong>,
+        Vrije Universiteit Amsterdam (VUA), Netherlands (2022 &ndash; 2025)
+      </li>
+      <li>
+        <strong>Master of Arts, Conservation and Rehabilitation of Urban Heritage</strong>, College
+        of Fine Arts, University of Tehran, Iran (2016 &ndash; 2019)
+      </li>
+      <li>
+        <strong>Bachelor of Science, Architecture</strong>, University of Tabriz, Iran (2011 &ndash;
+        2015)
+      </li>
+    </ul>
+
+    <h2 class="title">Grants and Funding</h2>
+    <p>
+      <strong>Marie Sk&#322;odowska-Curie Doctoral Fellowship (Horizon 2020)</strong>: Cultural
+      Heritage and the Planning of European Landscapes (HERILAND), 2021 &ndash; 2024. Doctoral
+      researcher within the EU-funded HERILAND network (Marie Sk&#322;odowska-Curie Actions).
+    </p>
+  </div>
+</div>

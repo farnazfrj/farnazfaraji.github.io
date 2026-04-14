@@ -1,0 +1,30 @@
+{
+  "name": "Farnaz (Naz) Faraji",
+  "shortName": "Farnaz Faraji",
+  "jobTitle": "Interdisciplinary Researcher in Heritage, Landscapes and Built Environment",
+  "email": "farnaz.faraji96@gmail.com",
+  "image": "/files/profile.jpg",
+  "resume": "/files/resume.pdf",
+  "social": [
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=d8AvsWEAAAAJ&hl=en",
+      "icon": "/assets/images/icons/google-scholar.png"
+    },
+    {
+      "name": "ORCID",
+      "url": "https://orcid.org/0000-0003-0342-3845",
+      "icon": "/assets/images/icons/orcid.png"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/farnaz-faraji/",
+      "icon": "/assets/images/icons/linkedin.png"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/farnazfrj",
+      "icon": "/assets/images/icons/github.png"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/images/icons/favicon.png" />
+    <link href="/assets/css/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="/assets/css/aos.css" type="text/css" rel="stylesheet" />
+    <link href="/assets/css/style.css" type="text/css" rel="stylesheet" />
+    <title>{{ title }} | {{ site.shortName }}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-aos="fade-in">
+      <div class="container">
+        <a class="navbar-brand" href="/">{{ site.shortName }}</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            {%- for item in navigation %}
+            <li class="nav-item">
+              <a
+                class="nav-link{% if page.url == item.url %} active{% endif %}"
+                href="{{ item.url }}"
+                >{{ item.title }}</a
+              >
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container-lg{% if not isHome %} pt-4{% endif %}"
+      data-aos="fade-in"
+      id="content_wrapper"
+    >
+      {{ content | safe }}
+    </div>
+
+    <script src="/assets/scripts/default.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/assets/scripts/bootstrap-collapse.js"></script>
+  </body>
+</html>

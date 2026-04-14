@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Work Experience
+permalink: /work/
+---
+
+<h1 class="title">Work Experience</h1>
+
+<div id="jobs_data">
+  {%- for job in work %}
+  <div class="job_item">
+    <div class="job_header">
+      <div>
+        <h1>{{ job.title }},</h1>
+        <h2>{{ job.company }}</h2>
+      </div>
+      <div>
+        <span>{{ job.start }} - {{ job.end if job.end else "Present" }}</span>
+        <span class="job_location">{{ job.location }}</span>
+      </div>
+    </div>
+    <p>{{ job.description }}</p>
+    {%- if job.achievements.length > 0 %}
+    <div>
+      <ul>
+        {%- for achievement in job.achievements %}
+        <li>{{ achievement }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+  </div>
+  {%- endfor %}
+</div>

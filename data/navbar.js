@@ -14,7 +14,7 @@ $(document).ready(function () {
         url: "/",
       },
       {
-        active: navbarLinks.publications ? true : false,
+        active: navbarLinks.Research ? true : false,
         title:
           lang === "fa" ? faNavbarData.Research : enNavbarData.Research,
         url: "/Research.html",
@@ -30,7 +30,7 @@ $(document).ready(function () {
         url: "/Work.html",
       },
       {
-        active: navbarLinks.contact ? true : false,
+        active: navbarLinks.Contact ? true : false,
         title: lang === "fa" ? faNavbarData.Contact : enNavbarData.Contact,
         url: "/contact.html",
       },

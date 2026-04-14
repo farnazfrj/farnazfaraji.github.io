@@ -1,6 +1,27 @@
 {
   "sections": [
     {
+      "title": "Grants and Funding",
+      "items": [
+        {
+          "title": "Cultural Heritage and the Planning of European Landscapes (HERILAND)",
+          "venue": "2021 – 2024. Doctoral researcher within the EU-funded HERILAND network (Marie Skłodowska-Curie Actions).",
+          "link": "https://www.heriland.eu",
+          "github": "",
+          "writers": ["Marie Skłodowska-Curie Doctoral Fellowship (Horizon 2020)"]
+
+        },
+        {
+          "title": "Sustainability for Architectural Heritage (SAH)",
+          "venue": "Co-writer of proposal; co-designed MA conservation syllabi; conference presentations. ",
+          "link": "https://international.ut.ac.ir/en/news/20407/capacity-building-in-sustainability-for-architectural-heritage-sah-",
+          "github": "",
+          "writers": ["Erasmus+ Scholarship"]
+
+        }
+      ]
+    },
+    {
       "title": "Journal Papers",
       "items": [
         {

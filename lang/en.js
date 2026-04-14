@@ -1,6 +1,6 @@
 // ---------- Navbar titles
 const enNavbarData = {
-  title: " Your name ",
+  title: " Farnaz Faraji ",
   Home: "Home",
   Research: "Research",
   Teaching: "Teaching",
@@ -10,7 +10,7 @@ const enNavbarData = {
 
 // ---------- Home page data
 const enHomePageData = {
-  name: " Farnaz Faraji ",
+  name: " Farnaz (Naz) Faraji ",
   jobTitle: " Interdisciplinary Researcher in Heritage, Landscape and Sustainability",
   home_title: "About me",
   home_content: `

@@ -68,6 +68,19 @@
           "link": "https://doi.org/10.1007/978-981-19-6274-5_9",
           "github": "",
           "writers": [ "Faraji, F.", "Maasumi, E."]
+        },
+      ]
+    },
+    {
+      "title": "Books (Translated)",
+      "items": [
+        {
+          "title": "Zollverein World Heritage Site.",
+          "venue": "Tehran Municipality Publications ",
+          "date": "2020",
+          "link": "",
+          "github": "",
+          "writers": ["Müller, K. Translation to Farsi: Fadaei Nezhad, S., Faraji, F."]
         }
       ]
     },

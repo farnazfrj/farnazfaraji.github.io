@@ -20,6 +20,25 @@
       ]
     },
     {
+      "title": "Thesis and Dissertations",
+      "items": [
+        {
+          "title": "Walking, Mapping, Belonging: Iranian Immigrants’ Landscape Perception in Manchester",
+          "venue": "Vrije Universiteit Amsterdam (VUA), Supervised by: Prof. Dr Gert-Jan Burgers., Dr Niels van Manen.,& Dr Francesco Carrer",
+          "date": "2026",
+          "link": "https://research.vu.nl/en/publications/walking-mapping-and-belonging-participatory-tools-to-capture-iran/#:~:text=Using%20interactive%20and%20citizen%20science,and%20symbolic%20significance%20for%20them.",
+          "github": "",
+          "writers": ["Faraji, F. "]
+        },
+        {
+          "title": "Heritage Conservation strategy and Policy to Preserve the Historic Rural Landscape of Ushtabin Village, Azerbaijan Province, Iran",
+          "venue": "University of Tehran, College of Fine Arts, Supervised by: Prof. Dr Somayeh Fadaei Nezhad ",
+          "date": "2019",
+          "writers": ["Faraji, F. "]
+        }
+      ]
+    },
+    {
       "title": "Journal Papers",
       "items": [
         {

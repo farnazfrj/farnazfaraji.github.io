@@ -41,7 +41,7 @@
           "writers": ["Moradi, S.", "Faraji, F.", "Fadaei Nezhad, S."]
         },
         {
-          "title": "Automatic Localization of Caravanserais in Satellite Images using Image Processing Techniques based on Deep Learning.",
+          "title": "Automatic Localisation of Caravanserais in Satellite Images using Image Processing Techniques based on Deep Learning.",
           "venue": "Journal of Circuits, Data and System Analysis.",
           "date": "2023",
           "link": "https://sanad.iau.ir/fa/Article/848525",
@@ -68,7 +68,7 @@
           "link": "https://doi.org/10.1007/978-981-19-6274-5_9",
           "github": "",
           "writers": [ "Faraji, F.", "Maasumi, E."]
-        },
+        }
       ]
     },
     {

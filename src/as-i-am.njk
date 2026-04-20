@@ -4,136 +4,360 @@ title: As I Am
 permalink: /as-i-am/
 ---
 
-<h1 class="title">As I Am</h1>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<p>
-  This is where I share a bit about who I am beyond my academic work &mdash; my hobbies, interests,
-  and writings 👩🏻‍💻 (This section is under construction ^_^)
-</p>
+<style>
+  .aim-root {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-text-primary, #1a1a1a);
+    padding: 2rem 0;
+    max-width: 860px;
+  }
 
+  .aim-hero {
+    margin-bottom: 3rem;
+  }
 
-  <h2 class="title">1. Roots</h2>
-   <p>
-   Farnaz is Persian-rooted, composed of two words: "Far" and "Naz". 
-    </p>
-      <ul>
-      <li>
-        "Far" in ancient Persian means "divine glory," "radiance," "splendour," or "kingly majesty" 😎
-      </li>
-      <li> 
-        "Naz", common in many Indo-European languages, means "pride," "delicacy," "grace," "elegance," or "coyness". 
-      </li>      
+  .aim-hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.5px;
+  }
 
-  <h2 class="title">2. Hobbies</h2>
-   <p>
-   My list of hobbies are wide and vast and they change through time (I like to learn new things, and I love to get to know other people through their hobbies)🐣 
-    </p>
+  .aim-hero p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 560px;
+    line-height: 1.7;
+    margin: 0;
+  }
 
-  <h4 class="title"> Here are a few of my interests: </h4>
-      <ul>
-      <li> I am a Bookworm! 📚 Follow me on 
-      <a href="https://www.goodreads.com/" target="_blank" rel="noopener noreferrer">
-      Goodreads
-      </a>
-      and let's see which books we share! I am into Sci-Fi, historical, philosophical, romantic drama, poetry, and psychological books! (But I don't restrain myself)! 
-      My favourite series: Harry Potter, Brontë Sisters' books (The  tenant of wildfell hall is my fav), Italio Calvino's books (most admire Invisible Cities), Rebecca Solnit's books"
-      </li>
+  .aim-section {
+    margin-bottom: 3rem;
+  }
 
+  .aim-section-title {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #888;
+    letter-spacing: 0.04em;
+    margin: 0 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-      <li> Learning new languages and Cultures 🗣️
-      Right now, I am finishing my A1 'Italian" course on 
-      <a href="https://invite.duolingo.com/profile-share/FarnazFara1?via=share_profile_qr">
-      Doulingo
-      </a>. 
-      Come stai? Vorresti mangiare un gelato? 🍨
-      </li> 
+  .aim-section-title::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: #e0e0e0;
+  }
 
-      <li> Nature, Walking, and Hiking 🌅🌳
-      Mostly limited to the British and Iranian landscapes (St Abb's is my favourite place)
-      </li>
+  /* --- Roots --- */
+  .aim-name-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
 
-      <li>Travelling and Road trips 🧳✈️🗿
-      I grow up in a family who loved to explore. We used to travel at least twice in a year in a car. 
-      Since I am an Architect, and Heritage specialist, I love to visit new sites, cities and buildings
-      </li>
-      My beloved place in the world: Basilica Sant'Apollinare di Classe
+  .aim-name-card {
+    background: #f7f5f2;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
 
-      <li> Cooking, Baking and Making food! 👩‍🍳
-      I am trying different reciepes for a perfect Italian pizza dough. If you know one, let me know 
-      </li> 
+  .aim-name-word {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0 0 4px;
+  }
 
-      <li> Music 🎼
-      I have basic knowledge of playing Guitar, and harmonica. 
-      </li>
-      <p>
-      My favourite singers/bands are: Coldplay, Radio head, Parastoo Ahmadi, Sezen Aksu, Evgeny Grinko. Some of my Favourite songs are:
-      </p>
-      <div>
-      <div>
-      <a href="https://open.spotify.com/track/39Ss6by0XOlOA4WaDmwst1?si=8c75fabbf27948c8">
-      Haft - Parastoo Ahmadi
-      </a>
+  .aim-name-word.far { color: #B37D3A; }
+  .aim-name-word.naz { color: #3A6FA8; }
+
+  .aim-name-meaning {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* --- Hobby Cards --- */
+  .aim-hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+  }
+
+  .aim-hobby-card {
+    background: #fff;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.2s;
+  }
+
+  .aim-hobby-card:hover {
+    border-color: #bbb;
+  }
+
+  .aim-hobby-icon {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .aim-hobby-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+
+  .aim-hobby-detail {
+    font-size: 0.78rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* --- Music pills --- */
+  .aim-music-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0.5rem;
+  }
+
+  .aim-song-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f7f5f2;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .aim-song-pill:hover {
+    border-color: #bbb;
+  }
+
+  .aim-song-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1DB954;
+    flex-shrink: 0;
+  }
+
+  /* --- Memberships --- */
+  .aim-mem-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .aim-mem-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 1rem 1.1rem;
+    background: #f7f5f2;
+    border-radius: 8px;
+  }
+
+  .aim-mem-year {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #888;
+    min-width: 38px;
+    padding-top: 2px;
+  }
+
+  .aim-mem-body { flex: 1; }
+
+  .aim-mem-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 2px;
+  }
+
+  .aim-mem-sub {
+    font-size: 0.78rem;
+    color: #888;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .aim-name-grid { grid-template-columns: 1fr; }
+    .aim-hobby-grid { grid-template-columns: 1fr 1fr; }
+    .aim-hero h1 { font-size: 2rem; }
+  }
+</style>
+
+<div class="aim-root">
+
+  <div class="aim-hero">
+    <h1>As I Am</h1>
+    <p>Beyond my academic work &mdash; hobbies, interests, and a little bit of who I am. This section is always growing 👩🏻‍💻</p>
+  </div>
+
+  <!-- 1. Roots -->
+  <div class="aim-section">
+    <div class="aim-section-title">1. roots</div>
+    <div class="aim-name-grid">
+      <div class="aim-name-card">
+        <p class="aim-name-word far">Far</p>
+        <p class="aim-name-meaning">Divine glory &middot; radiance &middot; splendour &middot; kingly majesty. Ancient Persian, imbued with light.</p>
+      </div>
+      <div class="aim-name-card">
+        <p class="aim-name-word naz">Naz</p>
+        <p class="aim-name-meaning">Pride &middot; delicacy &middot; grace &middot; elegance. Shared across many Indo-European languages.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Hobbies -->
+  <div class="aim-section">
+    <div class="aim-section-title">2. hobbies &amp; interests</div>
+    <div class="aim-hobby-grid">
+
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">📚</div>
+        <div class="aim-hobby-label">Bookworm</div>
+        <div class="aim-hobby-detail">Sci-Fi, historical, philosophy, poetry, romantic drama. Favourites: Harry Potter, Bront&euml; Sisters, Calvino, Rebecca Solnit.</div>
       </div>
 
-      <div>
-      <a href="https://open.spotify.com/track/4zOfy9kqJlG0ZXvcaSh4gv?si=9b1da2a42d0a4dba">
-      Viva La Vida - Coldplay
-      </a>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">🗣️</div>
+        <div class="aim-hobby-label">Languages &amp; Cultures</div>
+        <div class="aim-hobby-detail">Currently finishing A1 Italian on Duolingo. <em>Vorresti mangiare un gelato?</em> 🍨</div>
       </div>
 
-      <div>
-      <a href="https://open.spotify.com/track/3mBfHi9DknxiVl7xkV10gI?si=8a1ae95fe24e4fb2">
-      Firtina (from my favourite childhood Turkish series "Yabanci Damat")
-      </a>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">🌅</div>
+        <div class="aim-hobby-label">Nature &amp; Hiking</div>
+        <div class="aim-hobby-detail">British and Iranian landscapes. St Abb&rsquo;s Head is a favourite escape.</div>
       </div>
 
-      <div>
-      <a href="https://open.spotify.com/track/4a44PipwkqCQT4JNOezUw4?si=06473bfe081949e2">
-      Valse - Evgeny Grinko
-      </a>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">✈️</div>
+        <div class="aim-hobby-label">Travel &amp; Road trips</div>
+        <div class="aim-hobby-detail">Grew up exploring by car. As an architect &amp; heritage specialist, sites and cities are a joy. Beloved: Basilica Sant&rsquo;Apollinare di Classe.</div>
       </div>
+
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">👩‍🍳</div>
+        <div class="aim-hobby-label">Cooking &amp; Baking</div>
+        <div class="aim-hobby-detail">On a quest for the perfect Italian pizza dough. Tips welcome!</div>
       </div>
 
-      <li> Movies, Operas, Series, Theatre shows! 🎭
-      Let's clear things first: I am a big Friend's fan! 
-      The only genre I don't watch are horror movies. 
-      </li>
-      I love operas! 
-      Probably,'Before Sunrise" trilogy is my favourite. 
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">🎸</div>
+        <div class="aim-hobby-label">Music</div>
+        <div class="aim-hobby-detail">Guitar and harmonica. Coldplay, Radiohead, Parastoo Ahmadi, Sezen Aksu, Evgeny Grinko.</div>
+      </div>
 
-      <li> Games in General! 👾
-      My dolls when I was a child were books, boardgames, and Lego pieces. I love to play online and computer games as well! 
-      </li>
-      My current favourite boardgame is: Dixit, Backgammon, and a bit of Chess :)
-      The most recent online- computer game I played: It takes two! (Amazing! Loved graphics and the scenario)
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">🎭</div>
+        <div class="aim-hobby-label">Film &amp; Theatre</div>
+        <div class="aim-hobby-detail">Big Friends fan. Loves opera. <em>Before Sunrise</em> trilogy is a favourite. No horror, please.</div>
+      </div>
 
-      <li> Lego and Puzzles! 🧩
-      If you want to see me as happy as a kid, invite me to make a Lego! or a Jigsaw puzzle!
-      </li>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">👾</div>
+        <div class="aim-hobby-label">Games</div>
+        <div class="aim-hobby-detail">Board games (Dixit, Backgammon, Chess) and video games. Most recently: <em>It Takes Two</em>.</div>
+      </div>
 
-      <li> Photography 📷
-      Analogue photography mostly! My father passed his Zenit (the Russian Tank) to me, and I have a Cannonet 28! My subjects are landscapes. 
-      </li>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">🧩</div>
+        <div class="aim-hobby-label">Lego &amp; Puzzles</div>
+        <div class="aim-hobby-detail">Invite her to build a Lego set or jigsaw &mdash; guaranteed happiness.</div>
+      </div>
 
-      <li> Writing, Journaling, and Poetry ✍️
-      From time to time, I write, blurb and transform my thoughts into poems. Poems are a window to the soul.
-      </li>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">📷</div>
+        <div class="aim-hobby-label">Photography</div>
+        <div class="aim-hobby-detail">Analogue, mostly landscapes. Shoots with a Zenit (the Russian Tank) and a Canonet 28.</div>
+      </div>
 
-      <li> Gardening and Keeping plants 👩‍🌾
-      This must be one of my least done activities, but it makes me feel good, and alive.  
-      </li>
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">✍️</div>
+        <div class="aim-hobby-label">Writing &amp; Poetry</div>
+        <div class="aim-hobby-detail">Journaling and transforming thoughts into poems. <em>&ldquo;Poems are a window to the soul.&rdquo;</em></div>
+      </div>
 
+      <div class="aim-hobby-card">
+        <div class="aim-hobby-icon">🌱</div>
+        <div class="aim-hobby-label">Gardening</div>
+        <div class="aim-hobby-detail">One of the quieter joys &mdash; keeping plants makes her feel grounded and alive.</div>
+      </div>
 
-    <h2 class="title">3. Memberships</h2>
+    </div>
 
-    <ul>
-     <li>
-        <strong>UK ICOMOS </strong>, ICOMOS SDG WG, ICOMOS ISCoAH (Since 2023- Joined SDG WG and ISCoAH- 2025)
-      </li>
-      <li>
-        <strong>Association of Critical Heritage Studies</strong>, (2023)
-      </li>
-      <li>
-        <strong>Association of National Noble Talents of Iran </strong>, University of Tehran, (Since 2016)
-      </li>
-    </ul>
+    <!-- Favourite songs -->
+    <div style="margin-top: 1.5rem;">
+      <div style="font-size: 0.82rem; font-weight: 500; color: #888; margin-bottom: 0.6rem;">favourite songs</div>
+      <div class="aim-music-row">
+        <a class="aim-song-pill" href="https://open.spotify.com/track/39Ss6by0XOlOA4WaDmwst1?si=8c75fabbf27948c8" target="_blank" rel="noopener noreferrer">
+          <span class="aim-song-dot"></span>Haft &mdash; Parastoo Ahmadi
+        </a>
+        <a class="aim-song-pill" href="https://open.spotify.com/track/4zOfy9kqJlG0ZXvcaSh4gv?si=9b1da2a42d0a4dba" target="_blank" rel="noopener noreferrer">
+          <span class="aim-song-dot"></span>Viva La Vida &mdash; Coldplay
+        </a>
+        <a class="aim-song-pill" href="https://open.spotify.com/track/3mBfHi9DknxiVl7xkV10gI?si=8a1ae95fe24e4fb2" target="_blank" rel="noopener noreferrer">
+          <span class="aim-song-dot"></span>F&icirc;rt&icirc;na &mdash; Yabanc&icirc; Damat
+        </a>
+        <a class="aim-song-pill" href="https://open.spotify.com/track/4a44PipwkqCQT4JNOezUw4?si=06473bfe081949e2" target="_blank" rel="noopener noreferrer">
+          <span class="aim-song-dot"></span>Valse &mdash; Evgeny Grinko
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Memberships -->
+  <div class="aim-section">
+    <div class="aim-section-title">3. memberships</div>
+    <div class="aim-mem-list">
+
+      <div class="aim-mem-item">
+        <div class="aim-mem-year">2016</div>
+        <div class="aim-mem-body">
+          <p class="aim-mem-name">Association of National Noble Talents of Iran</p>
+          <p class="aim-mem-sub">University of Tehran</p>
+        </div>
+      </div>
+
+      <div class="aim-mem-item">
+        <div class="aim-mem-year">2023</div>
+        <div class="aim-mem-body">
+          <p class="aim-mem-name">UK ICOMOS</p>
+          <p class="aim-mem-sub">Also joined ICOMOS SDG Working Group and ISCoAH in 2025</p>
+        </div>
+      </div>
+
+      <div class="aim-mem-item">
+        <div class="aim-mem-year">2023</div>
+        <div class="aim-mem-body">
+          <p class="aim-mem-name">Association of Critical Heritage Studies</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

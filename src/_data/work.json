@@ -1,11 +1,16 @@
 [
-   {
+  {
     "title": "Teaching Fellow in Cultural Heritage",
     "company": "University of Aberdeen",
     "start": "Sep 2026",
-    "end": "Current",
-    "location": "Aberdeen, Scotland",
-    "description": "Coordinating the Masters programme of Cultural Heritage and lecturing for various courses in heritage and archaeology for PGT and UG students",
+    "end": "On going",
+    "location": "Aberdeen, UK",
+    "description": "MSc Cultural Heirtage coordinator",
+    "achievements": [
+      "Teaching in a few of the PGT and UG courses in CH and Archaeology",
+      "Supervising Masters Dissertations" ,
+      "Managing education-learning activities for MSc in Cultural Heritage (such as markings, field trips, etc)" ,
+    ]
   },
   {
     "title": "Heritage & Engagement Officer",
